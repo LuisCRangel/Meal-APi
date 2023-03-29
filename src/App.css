@@ -1,19 +1,23 @@
 *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 body{
   margin: 0;
   padding: 0;
+  background-color: rgb(220, 215, 215);
 }
 
-.App{
-  min-height: 100vh;  
-  display: grid;
-  grid-template-columns: repeat(7, minmax(0, 1fr));  
-}
+
 
 .sidebar{
-margin: 0 auto;
+border: 1px solid #000;
+width: 300px;
+text-align: justify;
+background: white;
+overflow: hidden;
 }
 
   .sidebar h1{
@@ -21,12 +25,6 @@ margin: 0 auto;
     text-align: center;
   }
 
-.content{
-  padding: 0 30px;
-  background-color: rgb(220, 215, 215);
-  grid-column: span 6;
-  text-align: center;
-}
 
 .sidebar-list{
   display: flex;
@@ -34,9 +32,9 @@ margin: 0 auto;
   height: 77vh;      
   gap: 35px;
   list-style: none;
-  margin: 0;
-  padding-left: 0; 
   font-size: 18px; 
+  padding: 1rem;
+  margin-bottom: 100%;
 }
 
 i{
@@ -44,3 +42,69 @@ i{
   margin-right: 10px;    
 }
 
+/* ***************************container-padre**************************** */
+.container-padre{
+  display: flex;
+border: 1px solid #000;
+}
+
+
+/* ********************** seccion perfil ********************* */
+.container-perfil-card{
+ border: 1px solid #9b1414;
+ width: 100% ;
+ overflow: hidden;
+}
+
+
+.container-cards{border: 1px solid #178cc2;
+height: 100%;}
+
+.img-perfil{
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+}
+.perfil{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+border: 1px solid #5522b3d7;
+}
+.peril-input{border: 1px solid #000;
+height: 60px;
+margin-top: 1rem;
+display: flex;
+align-items: center;
+width: 200px;}
+.perfil-avatar{border: 1px solid #000;
+height: 60px;
+margin-top: 1rem;
+display: flex;
+align-items: center;
+width: 150px;
+justify-content: space-evenly;
+}
+.container-ordenList{
+  height: 70px;
+  border: 1px solid #0eb824;
+}
+.button-orden{
+  border: 1px solid #bada0a;
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+  height: 40px;
+  gap: 4px;
+}
+button{
+  width:70px;
+  border-radius: 8px;
+  border: none;
+  background: linear-gradient(rgba(0, 128, 0, 0.664),rgba(255, 0, 0, 0.11),rgba(0, 0, 255, 0.438));
+}
+a{
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.863);
+  font-weight: 500;
+}
