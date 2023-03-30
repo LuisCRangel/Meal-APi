@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Sidebar = () => {
+const Sidebar = ({ Producto }) => {
   return (
     <div className="container-padre">
 
@@ -31,30 +31,64 @@ const Sidebar = () => {
               <input type="text" placeholder='Buscar' />
             </div>
 
-          
+
           </div>
           <div className='perfil-avatar'><i class='bx bx-bell bx-tada' ></i>  <img className='img-perfil' src="https://www.que.es/wp-content/uploads/2021/03/El-avatar-online.jpg" alt="" /></div>
 
         </div>
-        <div className='container-ordenList'> 
-        <h3>OrdenList</h3>
-        <div className="button-orden">
-          <button>Orden 1</button>
-          <button>orden2</button>
-          <button>orden 3</button>
-          <button>orden 4</button>
-          <button>orden 5</button>
-          <button>orden 6</button>
-          <button>orden 7</button>
-          <button>orden 8</button>
-          <button>orden 9</button>
-          <button>orden10</button>
+        <div className='container-ordenList'>
+          <h3>OrdenList</h3>
+          <div className="button-orden">
+            <button>Orden 1</button>
+            <button>orden2</button>
+            <button>orden 3</button>
+            <button>orden 4</button>
+            <button>orden 5</button>
+            <button>orden 6</button>
+            <button>orden 7</button>
+            <button>orden 8</button>
+            <button>orden 9</button>
+            <button>orden10</button>
 
-        </div>
+          </div>
         </div>
         {/* cards */}
 
         <div className="container-cards">
+          {
+            Producto?.map(ordenes => (
+              <div className='cards'>
+
+                <div className='contenedor-ordenes-avatar'>
+                  <span>Orden: #{ordenes.id}</span>
+                  <img className='avatar-cards' src={ordenes.avatar} alt="" />
+
+                </div>
+                  {/*  */}
+                <div className='contenedor-img-src'>
+                  <img className='img-src' src={ordenes.src} alt="" />
+                  <div><h3>{ordenes.name}</h3>
+                    <span>$ {ordenes.price}</span>
+                  </div>
+
+                </div>
+                  {/*  */}
+                <div className='contenedor-icons'>
+                <span>$ {ordenes.price}</span>
+
+                <div>
+                <i class='bx bx-x bx-md'></i>
+                <i class='bx bx-check bx-md'></i>
+                </div>
+                </div>
+
+
+              </div>
+
+
+            ))
+
+          }
         </div>
 
 
