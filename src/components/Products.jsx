@@ -1,9 +1,13 @@
 import React from 'react';
+import Sidebar from './Sidebar';
 
 const Products = () => {
     return (
         <div>
-            <h1>ruta de productos</h1>
+           <div>
+             <Sidebar/>             
+            </div>
+            
         </div>
     );
 };
