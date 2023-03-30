@@ -1,6 +1,14 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
-const Sidebar = ({ Producto }) => {
+const Sidebar = ({ Producto,selectedPurchase,handleBuy }) => {
+
+const navigate = useNavigate()
+
+const product = (e)=>{
+e.preventDefault();
+  navigate('/products')
+}
   return (
     <div className="container-padre">
 
@@ -11,7 +19,7 @@ const Sidebar = ({ Producto }) => {
           <li><a href="#"><i className='bx bx-home-alt'></i>Home</a></li>
           <li><a href="mailto:adammaster29@gmail.com ?subject=peticion"><i className='bx bx-envelope'></i>Messages</a></li>
           <li><a href="#"><i className='bx bx-line-chart' ></i>Statistics</a></li>
-          <li><a href=""><i className='bx bx-dice-5'></i>Products</a></li>
+          <li><a onClick={product} href=""><i className='bx bx-dice-5'></i>Products</a></li>
           <li><a href=""><i className='bx bx-slider'></i>Settings</a></li>
         </ul>
         <p><i className='bx bx-log-in' ></i>LOGOUT</p>
@@ -27,28 +35,20 @@ const Sidebar = ({ Producto }) => {
         <div className='perfil'>
           <div className="peril-input">
             <div>
-              <i class='bx bx-search'></i>
+              <i className='bx bx-search'></i>
               <input type="text" placeholder='Buscar' />
             </div>
 
 
           </div>
-          <div className='perfil-avatar'><i class='bx bx-bell bx-tada' ></i>  <img className='img-perfil' src="https://www.que.es/wp-content/uploads/2021/03/El-avatar-online.jpg" alt="" /></div>
+          <div className='perfil-avatar'><i className='bx bx-bell bx-tada' ></i>  <img className='img-perfil' src="https://www.que.es/wp-content/uploads/2021/03/El-avatar-online.jpg" alt="" /></div>
 
         </div>
         <div className='container-ordenList'>
           <h3>OrdenList</h3>
           <div className="button-orden">
-            <button>Orden 1</button>
-            <button>orden2</button>
-            <button>orden 3</button>
-            <button>orden 4</button>
-            <button>orden 5</button>
-            <button>orden 6</button>
-            <button>orden 7</button>
-            <button>orden 8</button>
-            <button>orden 9</button>
-            <button>orden10</button>
+            
+          {selectedPurchase && <p>{selectedPurchase}</p>}
 
           </div>
         </div>
@@ -57,7 +57,7 @@ const Sidebar = ({ Producto }) => {
         <div className="container-cards">
           {
             Producto?.map(ordenes => (
-              <div className='cards'>
+              <div key={ordenes.id} className='cards'>
 
                 <div className='contenedor-ordenes-avatar'>
                   <span>Orden: #{ordenes.id}</span>
@@ -77,8 +77,8 @@ const Sidebar = ({ Producto }) => {
                 <span>$ {ordenes.price}</span>
 
                 <div>
-                <i class='bx bx-x bx-md'></i>
-                <i class='bx bx-check bx-md'></i>
+                <i className='bx bx-x bx-md'></i>
+                <i onClick={handleBuy} className='bx bx-check bx-md'></i>
                 </div>
                 </div>
 

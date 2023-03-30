@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 import './App.css'
+import Products from './components/Products';
 import Sidebar from './components/Sidebar'
 function App() {
 
@@ -18,10 +20,24 @@ useEffect(()=>{
   setProucto(productos)
 },[])
 
+const [selectedPurchase, setSelectedPurchase] = useState("");
+
+  const handleBuy = (Producto) => {
+    setSelectedPurchase(`compra: ${Producto.id}, Nombre: ${Producto.name}`);
+  };
+
+
+
+
   return (
     <div className='App'> 
-    <Sidebar Producto={Producto}/>
-  
+    <HashRouter>
+      <Routes>
+        <Route path="/" element={<Sidebar Producto={Producto} selectedPurchase={selectedPurchase} handleBuy={handleBuy}/>} />
+        <Route path="/products" element={<Products />} />    
+      </Routes>
+    </HashRouter>
+
     </div>
   )
 }
