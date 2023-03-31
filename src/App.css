@@ -84,6 +84,11 @@ i {
   width: 200px;
 }
 
+.bx-search{
+margin-top: .1rem;
+color: gray;
+}
+
 .peril-input input{
   position: relative;
   height: 30px;
@@ -270,4 +275,7 @@ textarea{
   border: 1px solid rgb(12, 160, 170);
   color: gray;
   text-align: center;
+}
+.btn-enviar:hover{
+background: rgb(12, 160, 170);;
 }

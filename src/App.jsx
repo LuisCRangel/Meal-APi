@@ -4,6 +4,7 @@ import './App.css'
 import Header from './components/Header';
 import Products from './components/Products';
 import Sidebar from './components/Sidebar'
+import Statistics from './components/Statistics';
 function App() {
 
   const productos = [
@@ -37,7 +38,8 @@ const [selectedPurchase, setSelectedPurchase] = useState("");
     <HashRouter>
       <Routes>
         <Route path="/" element={<Sidebar Producto={Producto} selectedPurchase={selectedPurchase} handleBuy={handleBuy}/>} />
-        <Route path="/products" element={<Products />} />    
+        <Route path="/products" element={<Products />} /> 
+        <Route path="/Statistics" element={<Statistics />} />     
       </Routes>
     </HashRouter>
 

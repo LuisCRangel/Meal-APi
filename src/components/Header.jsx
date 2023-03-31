@@ -7,7 +7,7 @@ const Header = ({selectedPurchase}) => {
       <div className='perfil'>
           <div className="peril-input">
             <div>
-              <i className='bx bx-search'></i>
+              <i className='bx bx-search bx-md'></i>
               <input type="text" placeholder='Buscar' />
             </div>
 

@@ -11,10 +11,17 @@ const product = (e)=>{
 e.preventDefault();
   navigate('/products')
 }
+
+const Statistics = (e)=>{
+  e.preventDefault();
+    navigate('/Statistics')
+  }
+
 const abrir = (e)=>{
   e.preventDefault();
   setShowModal(true)
   }
+
   return (
     <div className="container-padre">
 
@@ -34,7 +41,7 @@ const abrir = (e)=>{
             <label htmlFor="email">Correo</label>
             <input type="email" placeholder='Escribe Tu Correo' id='email'/>
             <textarea placeholder='Escribe Tu Mnesaje' id="" cols="30" rows="10"></textarea>
-        <input type="submit" value="Enviar" />
+        <input className='btn-enviar' type="submit" value="Enviar" />
       </form><br />
     <i  onClick={() => setShowModal(false)} className='bx bx-x'></i>
       
@@ -43,7 +50,7 @@ const abrir = (e)=>{
           
           
           </li>
-          <li className='sidebar-list-item'><a href="#"><i className='bx bx-line-chart' ></i>Statistics</a></li>
+          <li className='sidebar-list-item'><a onClick={Statistics} href="#"><i className='bx bx-line-chart' ></i>Statistics</a></li>
           <li className='sidebar-list-item'><a onClick={product} href=""><i className='bx bx-dice-5'></i>Products</a></li>
           <li className='sidebar-list-item'><a href=""><i className='bx bx-slider'></i>Settings</a></li>
           <li className='sidebar-list-item'><a href=""><i className='bx bx-log-in'></i>Logout</a></li>
