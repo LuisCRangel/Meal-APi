@@ -119,7 +119,9 @@ const Statistics = ({ product }) => {
               <span>6785 <i className='bx bx-like' ></i></span>
             </div>
           </div>
+        {/* fin Cards estadisticas */}
           <div className="stats-2">
+            {/* grafico circular */}
             <div class="circle-container">
               <svg viewBox="0 0 100 100" class="circle-chart">
                 <circle
@@ -127,24 +129,26 @@ const Statistics = ({ product }) => {
                   cx="50"
                   cy="50"
                   r="45"
-                ></circle>
+                  ></circle>
                 <circle
                   class="circle-chart-circle"
                   cx="50"
                   cy="50"
                   r="45"
-                ></circle>
+                  ></circle>
                 <text x="50" y="50" class="circle-chart-text">
                   70%
                 </text>
               </svg>
             </div>
+                  {/* grafico barras */}
           <div className="grafico-barra">
             <div className="barra">
                <img src="https://cdn.kastatic.org/ka-perseus-graphie/e2ff3457af2f719e193a668883096ba4c3c5e1d4.svg" alt="" />
             </div>
           </div>
           </div>
+                  {/* Contenedor de ordenes */}
           <div className="container-last-order">
           <ul className="last-order">
             <li className="orden-content"><span>Entregado</span> Combo Chef burguer whith double eat, cheddar, mozarella,whithout onion, chips extra large and coke </li>
