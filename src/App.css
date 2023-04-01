@@ -52,7 +52,7 @@ i {
   /* border: 1px solid #000000; */
   width: 100%;
   overflow: hidden;
-  margin: 0 40px;
+  margin: 0 15px;  
 }
 
 .container-cards {
@@ -73,6 +73,7 @@ i {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin: 0 80px;
   /* border: 1px solid #5522b3d7; */
 }
 .peril-input {

@@ -34,15 +34,16 @@ const [selectedPurchase, setSelectedPurchase] = useState("");
     setSelectedPurchase(`compra: ${Producto.id}, Nombre: ${Producto.name}`);
   };  
   return (
-    <div className='App'>     
-    <HashRouter>
+    <div className='App'> 
+        <HashRouter>
       <Routes>
         <Route path="/" element={<Sidebar Producto={Producto} selectedPurchase={selectedPurchase} handleBuy={handleBuy}/>} />
         <Route path="/products" element={<Products />} /> 
         <Route path="/Statistics" element={<Statistics />} />     
       </Routes>
     </HashRouter>
-
+    <div>
+    </div>
     </div>
   )
 }
