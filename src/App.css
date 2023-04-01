@@ -16,7 +16,7 @@ body {
   width: 300px;
   height: auto;
   text-align: justify;
-  background: white;
+  background: rgb(255, 255, 255);
   overflow: hidden;
 }
 .sidebar-logo{
@@ -43,6 +43,7 @@ i {
 /* *************************** container-padre **************************** */
 .container-padre {
   display: flex;
+  height: 100vh;
   /* border: 1px solid #9e0e0e; */
 }
 

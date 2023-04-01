@@ -27,7 +27,7 @@ const abrir = (e)=>{
 
       {/* sliderbar */}
       <div className='sidebar uno'>
-        <img className='sidebar-logo' src={`https://1000logos.net/wp-content/uploads/2023/01/Gofood-logo.png`} alt="" />
+        <img className='sidebar-logo' src={`https://graphicsfamily.com/wp-content/uploads/edd/2021/06/Editable-Photoshop-Food-Logo-Design-PNG-Transparent.png`} alt="" />
         <ul className='sidebar-list'>
           <li className='sidebar-list-item'><a href="#"><i className='bx bx-home-alt'></i>Home</a></li>
           <li className='sidebar-list-item'><a onClick={abrir} href=""><i className='bx bx-envelope'></i>Messages</a>
@@ -77,11 +77,11 @@ const abrir = (e)=>{
                   <img className='avatar-cards' src={ordenes.avatar} alt="" />
 
                 </div>
-                <hr />
-                  {/*  */}
+                <hr />            
                 <div className='contenedor-img-src'>
                   <img className='img-src' src={ordenes.src} alt="" />
-                  <div className='img-src-price'><h3>{ordenes.name}</h3>
+                  <div className='img-src-price'>
+                    <h3>{ordenes.name}</h3>
                     <span>$ {ordenes.price}</span>
                   </div>
 
