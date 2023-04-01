@@ -20,7 +20,7 @@ body {
   overflow: hidden;
 }
 .sidebar-logo{
-  width: 220px;
+  width: 180px;
   margin: 10px 10px 30px 10px;
   left: 50%;  
 }
@@ -243,6 +243,7 @@ hr {
   display: flex;
   justify-content: center;
   align-items: center;
+  backdrop-filter: blur(5px);
 }
 
 .modal-content {
@@ -250,6 +251,7 @@ hr {
   width: 400px;
   padding: 20px;
   border-radius: 5px;
+  
 }
 
 form{
@@ -258,7 +260,7 @@ form{
   width: 350px;
   height: auto;
   margin: 0 auto;
-  text-align: center;
+  text-align: center;  
 }
 input{
   height: 35px;

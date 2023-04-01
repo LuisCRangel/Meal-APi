@@ -1,10 +1,11 @@
 import React from 'react';
 import Sidebar from './Sidebar';
+import Header from './Header';
 
 const Products = () => {
     return (
         <div>
-           <div>
+           <div>        
              <Sidebar/>             
             </div>
             
