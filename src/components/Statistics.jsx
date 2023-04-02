@@ -2,6 +2,8 @@ import React, { useState } from "react";
 
 const Statistics = ({ product }) => {
   const [showModal, setShowModal] = useState(false);
+  const[contador,setcontador] = useState(6435)
+
 
   const abrir = (e) => {
     e.preventDefault();
@@ -112,11 +114,11 @@ const Statistics = ({ product }) => {
                 4.3 <i className="bx bxs-star"></i>
               </span>
             </div>
-            <div className="statistics-cards">
+            <div  className="statistics-cards">
               <p>
-                <i className="bx bx-bookmark bx3"></i>Likes
+                <i  className="bx bx-bookmark bx3"></i>Likes
               </p>
-              <span>6785 <i className='bx bx-like' ></i></span>
+              <span> <p>{contador}</p> <i className='bx bx-like' onClick={()=>setcontador(contador +1)} ></i></span>
             </div>
           </div>
         {/* fin Cards estadisticas */}
