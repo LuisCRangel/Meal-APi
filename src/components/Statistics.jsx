@@ -2,6 +2,8 @@ import React, { useState } from "react";
 
 const Statistics = ({ product }) => {
   const [showModal, setShowModal] = useState(false);
+  const[contador,setcontador] = useState(6435)
+
 
   const abrir = (e) => {
     e.preventDefault();
@@ -96,13 +98,13 @@ const Statistics = ({ product }) => {
               <p>
                 <i className="bx bx-bookmark"></i>Orders
               </p>
-              <span>18</span>
+              <span>18 <i class='bx bx-dish'></i></span>
             </div>
             <div className="statistics-cards">
               <p>
                 <i className="bx bx-bookmark bx1"></i> Followers
               </p>
-              <span>842</span>
+              <span>842 <i class='bx bx-user' undefined ></i></span>
             </div>
             <div className="statistics-cards">
               <p>
@@ -112,11 +114,11 @@ const Statistics = ({ product }) => {
                 4.3 <i className="bx bxs-star"></i>
               </span>
             </div>
-            <div className="statistics-cards">
+            <div  className="statistics-cards">
               <p>
-                <i className="bx bx-bookmark bx3"></i>Likes
+                <i  className="bx bx-bookmark bx3"></i>Likes
               </p>
-              <span>6785 <i className='bx bx-like' ></i></span>
+              <span> <p>{contador}</p> <i className='bx bx-like bx-tada' onClick={()=>setcontador(contador +1)} ></i></span>
             </div>
           </div>
         {/* fin Cards estadisticas */}
@@ -147,7 +149,7 @@ const Statistics = ({ product }) => {
                <img src="https://cdn.kastatic.org/ka-perseus-graphie/e2ff3457af2f719e193a668883096ba4c3c5e1d4.svg" alt="" />
             </div>
           </div>
-          </div>
+          </div><br /><br />
                   {/* Contenedor de ordenes */}
           <div className="container-last-order">
           <ul className="last-order">

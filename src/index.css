@@ -28,12 +28,13 @@
   flex-direction: column;
   justify-content: left;    
   gap: 5px;
-  background: rgba(255, 255, 255, 0.65);
+  background: var(--bg-black-900);
   width: 220px;
   height: 140px;
   padding: 10px 12px 10px 12px;
   font-weight: 500;
   border-radius: 8px; 
+  color: var(--text-black-900);
 }
 
 .statistics-cards p {  
@@ -57,7 +58,8 @@
   justify-content: center;
   align-items: center;
   width: 270px;
-  height: 170px;background-color: rgb(255, 255, 255);
+  height: 170px;
+  background: var(--bg-black-900);
   border-radius: 10px;
 }
 
@@ -101,7 +103,7 @@
 }
 /* ==================== Cards Grafico Barra ==================== */
 .grafico-barra{
-  background-color: rgb(255, 255, 255);
+  background-color: var(--bg-black-900);
   width: 370px;
   height: 170px;
   border-radius: 10px;
@@ -115,14 +117,24 @@
 .statistics-cards span{
   text-align: center;
   font-size: 35px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
+.bx-like{
+margin-left: 6px;
+margin-top: 7px;}
+.bxs-star{ 
+  margin-left: 6px;
+  margin-top: 3px;}
+
 .container-last-order{
   display: flex;
-  width: 100%;
-  height: 45%;
+  height: auto;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 2rem;
 }
 
 
@@ -136,8 +148,9 @@
   height: auto;
   gap: 10px;
   padding: 20px;
-  background: white;
+  background: var(--bg-black-900);
   border-radius: 10px;
+  color: var(--text-black-900);
 }
 
 .orden-content{
@@ -177,18 +190,30 @@
   color: rgb(213, 33, 245);
 }
 
-.bxs-star,
-.bx-like{
-  font-size: 30px;
-  color: rgba(203, 223, 24, 0.783);
-}
 
+
+.bx-like,
+.bx-user,
+.bxs-star,
+.bx-dish{
+  font-size: 30px;
+  margin-left: 10px;
+}
 .bx-like{
   color: blue;
 }
-
+.bxs-star{
+  color: rgb(255, 235, 9);
+  filter: drop-shadow(1px 1px 2px #403f3f); 
+}
+.bx-user{
+  color: #661af3;
+}
+.bx-dish{
+  color: rgb(211, 155, 99);
+}
 .bx1{
-  color: rgb(239, 162, 10);
+  color: #efa20a;
 }
 
 .bx2{

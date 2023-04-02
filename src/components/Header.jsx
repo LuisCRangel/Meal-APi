@@ -1,14 +1,20 @@
 import React from 'react'
 
-const Header = ({selectedPurchase}) => {
+const Header = ( {handleInputChange,nombreABuscar,buscarPorNombre}) => {
+  function handleKeyPress(event) {
+    if (event.charCode === 13) {
+      event.preventDefault();
+      buscarPorNombre();
+    }
+  }
 
   return (
     <div>
       <div className='perfil'>
           <div className="peril-input">
             <div>
-              <i className='bx bx-search'></i>
-              <input type="text" placeholder='Buscar' />
+              <i onClick={buscarPorNombre} className='bx bx-search'></i>
+              <input value={nombreABuscar} onChange={handleInputChange} type="text" placeholder='Buscar' onKeyPress={handleKeyPress} />
             </div>
 
 
@@ -20,7 +26,7 @@ const Header = ({selectedPurchase}) => {
           <h3>OrdenList</h3>
           <div className="button-orden">
             
-          {selectedPurchase && <p>{selectedPurchase}</p>}
+        
 
           </div>
         </div>
