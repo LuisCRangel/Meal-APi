@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Header from './Header';
 
-const Sidebar = ({ Producto }) => {
+const Sidebar = () => {
   const [showModal, setShowModal] = useState(false);
 
 const navigate = useNavigate()
@@ -68,41 +68,7 @@ const abrir = (e)=>{
         {/* cards */}
 
         <div className="container-cards">
-          {
-            Producto?.map(ordenes => (
-              <div key={ordenes.id} className='cards'>
-
-                <div className='contenedor-ordenes-avatar'>
-                  <span>Orden: #{ordenes.id}</span>
-                  <img className='avatar-cards' src={ordenes.avatar} alt="" />
-
-                </div>
-                <hr />            
-                <div className='contenedor-img-src'>
-                  <img className='img-src' src={ordenes.src} alt="" />
-                  <div className='img-src-price'>
-                    <h3>{ordenes.name}</h3>
-                    <span>$ {ordenes.price}</span>
-                  </div>
-
-                </div>
-                  {/*  */}
-                <div className='contenedor-icons'>
-                <span>$ {ordenes.price}</span>
-
-                <div>
-                <i className='bx bx-x'></i>
-                <i  className='bx bx-check'></i>
-                </div>
-                </div>
-
-
-              </div>
-
-
-            ))
-
-          }
+        
         </div>
 
 

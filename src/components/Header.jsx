@@ -8,8 +8,8 @@ const Header = ( {handleInputChange,nombreABuscar,buscarPorNombre}) => {
       <div className='perfil'>
           <div className="peril-input">
             <div>
-              <i className='bx bx-search bx-md'></i>
-              <input type="text" placeholder='Buscar' />
+              <i onClick={buscarPorNombre} className='bx bx-search bx-md'></i>
+              <input value={nombreABuscar} onChange={handleInputChange} type="text" placeholder='Buscar' />
             </div>
 
 

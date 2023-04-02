@@ -147,7 +147,7 @@ const Statistics = ({ product }) => {
                <img src="https://cdn.kastatic.org/ka-perseus-graphie/e2ff3457af2f719e193a668883096ba4c3c5e1d4.svg" alt="" />
             </div>
           </div>
-          </div>
+          </div><br /><br />
                   {/* Contenedor de ordenes */}
           <div className="container-last-order">
           <ul className="last-order">

@@ -43,8 +43,7 @@ i {
 /* *************************** container-padre **************************** */
 .container-padre {
   display: flex;
-  height: 100vh;
-  /* border: 1px solid #9e0e0e; */
+  height: 100%;
 }
 
 /* ********************** seccion perfil ********************* */
