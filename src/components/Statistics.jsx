@@ -118,7 +118,7 @@ const Statistics = ({ product }) => {
               <p>
                 <i  className="bx bx-bookmark bx3"></i>Likes
               </p>
-              <span> <p>{contador}</p> <i className='bx bx-like bx-tada' onClick={()=>setcontador(contador +1)} ></i></span>
+              <span>{contador}<i className='bx bx-like bx-tada' onClick={()=>setcontador(contador +1)} ></i></span>
             </div>
           </div>
         {/* fin Cards estadisticas */}
