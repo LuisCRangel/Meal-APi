@@ -1,14 +1,15 @@
 import React from 'react'
 
-const Header = ({selectedPurchase}) => {
+const Header = ( {handleInputChange,nombreABuscar,buscarPorNombre}) => {
+
 
   return (
     <div>
       <div className='perfil'>
           <div className="peril-input">
             <div>
-              <i className='bx bx-search bx-md'></i>
-              <input type="text" placeholder='Buscar' />
+              <i onClick={buscarPorNombre}  className='bx bx-search bx-md'></i>
+              <input  value={nombreABuscar} onChange={handleInputChange} type="text" placeholder='Buscar' />
             </div>
 
 
@@ -20,7 +21,7 @@ const Header = ({selectedPurchase}) => {
           <h3>OrdenList</h3>
           <div className="button-orden">
             
-          {selectedPurchase && <p>{selectedPurchase}</p>}
+        
 
           </div>
         </div>

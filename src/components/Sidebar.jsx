@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Header from './Header';
 
-const Sidebar = ({ Producto,handleBuy }) => {
+const Sidebar = ({ Producto }) => {
   const [showModal, setShowModal] = useState(false);
 
 const navigate = useNavigate()
@@ -92,7 +92,7 @@ const abrir = (e)=>{
 
                 <div>
                 <i className='bx bx-x'></i>
-                <i onClick={handleBuy} className='bx bx-check'></i>
+                <i  className='bx bx-check'></i>
                 </div>
                 </div>
 
