@@ -16,12 +16,11 @@ body {
   width: 300px;
   height: auto;
   text-align: justify;
-  background: white;
+  background: rgb(255, 255, 255);
   overflow: hidden;
 }
 .sidebar-logo{
-  width: 150px;
-  height: 80px;
+  width: 180px;
   margin: 10px 10px 30px 10px;
   left: 50%;  
 }
@@ -44,15 +43,16 @@ i {
 /* *************************** container-padre **************************** */
 .container-padre {
   display: flex;
+  height: 100vh;
   /* border: 1px solid #9e0e0e; */
 }
 
 /* ********************** seccion perfil ********************* */
 .container-perfil-card {
-  /* border: 1px solid #000000; */
+  /* border: 1px solid #000000; */  
   width: 100%;
   overflow: hidden;
-  margin: 0 40px;
+  margin: 0 15px;  
 }
 
 .container-cards {
@@ -64,8 +64,8 @@ i {
 }
 
 .img-perfil {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   border-radius: 100%;
   object-fit: cover;
 }
@@ -73,6 +73,7 @@ i {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin: 0 80px;
   /* border: 1px solid #5522b3d7; */
 }
 .peril-input {
@@ -92,7 +93,7 @@ color: gray;
 .peril-input input{
   position: relative;
   height: 30px;
-  width: 180px;
+  width: 230px;
   text-align: center;
   border: none;
   border-radius: 5px;  
@@ -104,7 +105,7 @@ h3{
 .peril-input i{
   position: absolute;
   z-index: 10;
-  padding: 5px;
+  padding: 12px;
 }
 
 .perfil-avatar {
@@ -166,8 +167,8 @@ hr {
 }
 
 .img-src {
-  width: 90px;
-  height: 90px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   object-fit: cover;
 }
@@ -178,8 +179,8 @@ hr {
 
 .cards {
   /* border: 1px solid #000; */
-  width: 250px;
-  height: 280px;
+  width: 200px;
+  height: 250px;
   background: white;
   border-radius: 10px;
 }
@@ -192,7 +193,7 @@ hr {
   font-size: 14px;
   color: #000000b9;
   /* border: 1px solid #000; */
-  height: 170px;
+  height: 150px;
 }
 .contenedor-icons {
   display: flex;
@@ -243,6 +244,7 @@ hr {
   display: flex;
   justify-content: center;
   align-items: center;
+  backdrop-filter: blur(5px);
 }
 
 .modal-content {
@@ -250,6 +252,7 @@ hr {
   width: 400px;
   padding: 20px;
   border-radius: 5px;
+  
 }
 
 form{
@@ -258,7 +261,7 @@ form{
   width: 350px;
   height: auto;
   margin: 0 auto;
-  text-align: center;
+  text-align: center;  
 }
 input{
   height: 35px;
