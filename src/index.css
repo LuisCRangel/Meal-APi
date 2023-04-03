@@ -29,7 +29,7 @@
   flex-direction: column;
   justify-content: left;
   gap: 5px;
-  background: var(--bg-black-900);
+  background: var(--bg-fondo-card-statict);
   width: 220px;
   height: 140px;
   padding: 10px 12px 10px 12px;

@@ -12,6 +12,7 @@
   --bg-fondo-sidebar: #ffffff;
   --bg-fondo-App:#dcd7d7;
   --bg-fondo-card:white;
+  --bg-fondo-card-statict:white;
   --txt-texto-sidebar: gray;
   --txt-texto-App: gray;
   --txt-texto-header: gray;
@@ -28,6 +29,7 @@
   --bg-fondo-sidebar: rgb(8, 5, 39);
   --bg-fondo-card:rgb(221, 215, 215);
   --bg-fondo-App:rgba(0, 0, 0, 0.836);
+  --bg-fondo-card-statict:rgb(8, 16, 59);
 --txt-texto-sidebar: white;
 --txt-texto-App: white;
   --txt-texto-header: white;
