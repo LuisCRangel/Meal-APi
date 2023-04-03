@@ -31,13 +31,22 @@ useEffect(()=>{
   setProucto(productos)
 },[])
 
+// *************** modo nocturno*************
+
+const [darkMode, setDarkMode] = useState(false);
+
+const handleDarkModeToggle = () => {
+  setDarkMode(!darkMode);
+}
+
+
 
   return (
-    <div className='App'> 
+    <div className={`App ${darkMode ? "dark-mode" : ""}`}> 
         <HashRouter>
       <Routes>
-        <Route path="/" element={<Sidebar />} />
-        <Route path="/products" element={<Products product={product} />} /> 
+        <Route path="/" element={<Sidebar  handleDarkModeToggle={handleDarkModeToggle} />} />
+        <Route path="/products" element={<Products handleDarkModeToggle={handleDarkModeToggle}  product={product} />} /> 
         <Route path="/Statistics" element={<Statistics />} />     
       </Routes>
     </HashRouter>

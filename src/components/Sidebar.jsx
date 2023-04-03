@@ -2,25 +2,34 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Header from './Header';
 
-const Sidebar = () => {
+const Sidebar = ({ handleDarkModeToggle }) => {
   const [showModal, setShowModal] = useState(false);
+  const [Modal, setModal] = useState(false);
 
-const navigate = useNavigate()
+  const navigate = useNavigate()
 
-const product = (e)=>{
-e.preventDefault();
-  navigate('/products')
-}
+  const product = (e) => {
+    e.preventDefault();
+    navigate('/products')
+  }
 
-const Statistics = (e)=>{
-  e.preventDefault();
+  const Statistics = (e) => {
+    e.preventDefault();
     navigate('/Statistics')
   }
 
-const abrir = (e)=>{
-  e.preventDefault();
-  setShowModal(true)
+  const abrir = (e) => {
+    e.preventDefault();
+    setShowModal(true)
   }
+  const abrirModal = (e) => {
+    e.preventDefault();
+    setModal(true)
+  }
+
+  
+
+
 
   return (
     <div className="container-padre">
@@ -32,30 +41,44 @@ const abrir = (e)=>{
           <li className='sidebar-list-item'><a href="#"><i className='bx bx-home-alt'></i>Home</a></li>
           <li className='sidebar-list-item'><a onClick={abrir} href=""><i className='bx bx-envelope'></i>Messages</a>
 
-          {showModal && (
-  <div className="modal">
-    <div className="modal-content">
-      <form action="">
-            <label htmlFor="nombre">Nombre</label>
-            <input className='a' type="text" placeholder='Escribe Tu Nombre' id='nombre'/>
-            <label htmlFor="email">Correo</label>
-            <input type="email" placeholder='Escribe Tu Correo' id='email'/>
-            <textarea placeholder='Escribe Tu Mnesaje' id="" cols="30" rows="10"></textarea>
-        <input className='btn-enviar' type="submit" value="Enviar" />
-      </form><br />
-    <i  onClick={() => setShowModal(false)} className='bx bx-x'></i>
-      
-    </div>
-  </div>)}
-          
-          
+            {showModal && (
+              <div className="modal">
+                <div className="modal-content">
+                  <form action="">
+                    <label htmlFor="nombre">Nombre</label>
+                    <input className='a' type="text" placeholder='Escribe Tu Nombre' id='nombre' />
+                    <label htmlFor="email">Correo</label>
+                    <input type="email" placeholder='Escribe Tu Correo' id='email' />
+                    <textarea placeholder='Escribe Tu Mnesaje' id="" cols="30" rows="10"></textarea>
+                    <input className='btn-enviar' type="submit" value="Enviar" />
+                  </form><br />
+                  <i onClick={() => setShowModal(false)} className='bx bx-x'></i>
+
+                </div>
+              </div>)}
+
+
           </li>
           <li className='sidebar-list-item'><a onClick={Statistics} href="#"><i className='bx bx-line-chart' ></i>Statistics</a></li>
           <li className='sidebar-list-item'><a onClick={product} href=""><i className='bx bx-dice-5'></i>Products</a></li>
-          <li className='sidebar-list-item'><a href=""><i className='bx bx-slider'></i>Settings</a></li>
+          <li className='sidebar-list-item'><a onClick={abrirModal} href=""><i className='bx bx-slider'></i>Settings</a>
+            {/* modal configuracion */}
+            {Modal && (
+
+              <div className="modal">
+                <div className="modal-content">
+
+                  <i onClick={handleDarkModeToggle} class='bx bxs-moon'></i>
+                  <i onClick={() => setModal(false)} className='bx bx-x'></i>
+
+                </div>
+              </div>)}
+
+
+          </li>
           <li className='sidebar-list-item'><a href=""><i className='bx bx-log-in'></i>Logout</a></li>
         </ul>
-       
+
       </div>
 
 
@@ -63,12 +86,12 @@ const abrir = (e)=>{
 
       <div className='container-perfil-card'>
         {/* PERFIL */}
-        <Header/>
-        
+        <Header />
+
         {/* cards */}
 
         <div className="container-cards">
-    
+
         </div>
 
 

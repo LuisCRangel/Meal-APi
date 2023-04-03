@@ -3,9 +3,14 @@ import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Header from './Header';
 
-const Products = () => {
+const Products = ({handleDarkModeToggle}) => {
     const [showModal, setShowModal] = useState(false);
+    const [Modal, setModal] = useState(false);
 
+    const abrirModal = (e) => {
+        e.preventDefault();
+        setModal(true)
+      }
     const navigate = useNavigate()
 
     const product = (e) => {
@@ -96,7 +101,7 @@ const Products = () => {
         <img className='sidebar-logo' src={`https://graphicsfamily.com/wp-content/uploads/edd/2021/06/Editable-Photoshop-Food-Logo-Design-PNG-Transparent.png`} alt="" />
         <ul className='sidebar-list'>
           <li className='sidebar-list-item'><a href="#"><i className='bx bx-home-alt'></i>Home</a></li>
-          <li className='sidebar-list-item'><a onClick={abrir} href=""><i className='bx bx-envelope'></i>Messages</a>
+          <li className='sidebar-list-item'><a onClick={abrir}  href=""><i className='bx bx-envelope'></i>Messages</a>
 
           {showModal && (
   <div className="modal">
@@ -118,7 +123,20 @@ const Products = () => {
           </li>
           <li className='sidebar-list-item'><a onClick={Statistics} href="#"><i className='bx bx-line-chart' ></i>Statistics</a></li>
           <li className='sidebar-list-item'><a onClick={product} href=""><i className='bx bx-dice-5'></i>Products</a></li>
-          <li className='sidebar-list-item'><a href=""><i className='bx bx-slider'></i>Settings</a></li>
+          <li className='sidebar-list-item'><a onClick={abrirModal} href=""><i className='bx bx-slider'></i>Settings</a>
+          
+          {/* modal configuracion */}
+          {Modal && (
+
+<div className="modal">
+  <div className="modal-content">
+
+    <i onClick={handleDarkModeToggle} class='bx bxs-moon'></i>
+    <i onClick={() => setModal(false)} className='bx bx-x'></i>
+
+  </div>
+</div>)}
+          </li>
           <li className='sidebar-list-item'><a href=""><i className='bx bx-log-in'></i>Logout</a></li>
         </ul>
        

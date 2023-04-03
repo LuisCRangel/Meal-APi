@@ -6,9 +6,17 @@
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
+
+/* ******modo nocturno****** */
 :root {
-  --bg-black-900: #ffffff;
-  --bg-black-100: #dcd7d7;
+  --bg-fondo-sidebar: #ffffff;
+  --bg-fondo-App:#dcd7d7;
+  --bg-fondo-card:white;
+  --txt-texto-sidebar: gray;
+  --txt-texto-App: gray;
+  --txt-texto-header: gray;
+--txt-modal:white;
+
   --bg-black-50: #e8dfec;  
   --text-black-900: #302e4d;
   --text-black-700: #504e70;
@@ -16,11 +24,31 @@
 
 }
 
-body {
+.dark-mode{
+  --bg-fondo-sidebar: rgb(8, 5, 39);
+  --bg-fondo-card:rgb(221, 215, 215);
+  --bg-fondo-App:rgba(0, 0, 0, 0.836);
+--txt-texto-sidebar: white;
+--txt-texto-App: white;
+  --txt-texto-header: white;
+  --txt-modal:rgba(19, 18, 18, 0.479);
+
+  --bg-black-50: #e8dfec;  
+  --text-black-900: #302e4d;
+  --text-black-700: #504e70;
+  --text-black-50: #242424;
+  
+}
+
+body,.App {
   margin: 0;
   padding: 0;
-  background-color: var(--bg-black-100);
+ background:var(--bg-fondo-App);
 }
+
+
+
+
 
 /* **************************Sidebar**************************** */
 .sidebar {
@@ -28,7 +56,7 @@ body {
   width: 200px;
   height: 100vh;
   text-align: justify;
-  background: var(--bg-black-900);
+  background: var(--bg-fondo-sidebar);
   overflow: hidden;
 }
 .sidebar-logo {
@@ -50,8 +78,12 @@ body {
   display: block;
   width: 110px;
   height: 25px;
+  
 }
 
+.sidebar-list a{
+  color: var(--txt-texto-sidebar);
+}
 
 i {
   
@@ -59,10 +91,17 @@ i {
   margin-right: 10px;
 }
 
+/* *********   Header   ********* */
+.container-ordenList h3{
+  color: var(--txt-texto-header);
+}
+.bx-bell {color: var(--txt-texto-header);}
+
 /* *************************** container-padre **************************** */
 .container-padre {
   display: flex;
   height: 100%;
+ 
 }
 
 /* ********************** seccion perfil ********************* */
@@ -71,6 +110,7 @@ i {
   height: 100%;
   overflow: hidden;
   margin: 0 15px;
+ 
 }
 
 .container-cards {
@@ -210,7 +250,7 @@ hr {
   /* border: 1px solid #000; */
   width: 200px;
   height: 250px;
-  background: var(--bg-black-900);
+  background: var(--bg-fondo-card);
   border-radius: 10px;
 }
 .contenedor-img-src {
@@ -281,7 +321,7 @@ hr {
 }
 
 .modal-content {
-  background-color:var(--bg-black-900);
+  background-color:var(--txt-modal);
   width: 400px;
   padding: 20px;
   border-radius: 5px;
@@ -294,6 +334,7 @@ form {
   height: auto;
   margin: 0 auto;
   text-align: center;
+  background-color:var(--txt-modal);
 }
 input {
   height: 35px;
@@ -301,6 +342,7 @@ input {
   border-radius: 8px;
   border: 1px dashed rgb(12, 160, 170);
   text-align: center;
+  background-color:var(--txt-modal);
 }
 input:focus {
   border: 1px dashed rgb(9, 67, 71);
@@ -310,7 +352,13 @@ textarea {
   border: 1px solid rgb(12, 160, 170);
   color: gray;
   text-align: center;
+  background-color:var(--txt-modal);
+}
+.btn-enviar {
+ width: 100%;
+  
 }
 .btn-enviar:hover {
   background: rgb(12, 160, 170);
+  
 }
