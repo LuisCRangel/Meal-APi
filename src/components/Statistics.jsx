@@ -1,10 +1,14 @@
-import React, { useState } from "react";
+import React, { useState} from "react";
 
-const Statistics = ({ product }) => {
+const Statistics = ({ product,handleDarkModeToggle }) => {
   const [showModal, setShowModal] = useState(false);
+  const[change,setChange] = useState(false)
   const[contador,setcontador] = useState(6435)
 
-
+const changeModal = (e)=>{
+e.preventDefault()
+setChange(true)
+}
   const abrir = (e) => {
     e.preventDefault();
     setShowModal(true);
@@ -78,9 +82,22 @@ const Statistics = ({ product }) => {
             </a>
           </li>
           <li className="sidebar-list-item">
-            <a href="">
+            <a onClick={changeModal} href="">
               <i className="bx bx-slider"></i>Settings
             </a>
+  {/* modal configuracion */}
+  {change && (
+
+<div className="modal">
+  <div className="modal-content">
+
+    <i onClick={handleDarkModeToggle} class='bx bxs-moon'></i>
+    <i onClick={() => setChange(false)} className='bx bx-x'></i>
+
+  </div>
+</div>)}
+
+
           </li>
           <li className="sidebar-list-item">
             <a href="">

@@ -2,15 +2,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 1600px;
   height: auto;
   margin: 0 auto;
-  overflow: auto;
+
 }
 .statistics-container-inside {
   width: 100%;
   height: 100vh;
   margin-left: 200px;
+
+ 
 }
 
 /* ==================== Cards ==================== */
@@ -22,6 +23,7 @@
   justify-content: center;
   align-items: center;
   gap: 20px;
+
 }
 
 .statistics-cards {
@@ -35,7 +37,8 @@
   padding: 10px 12px 10px 12px;
   font-weight: 500;
   border-radius: 8px;
-  color: var(--text-black-900);
+  color: var(--txt-statict);
+  border: 1px solid white;
 }
 
 .statistics-cards p {
@@ -51,6 +54,7 @@
   align-items: center;
   gap: 30px;
   height: 20%;
+  
 }
 
 /* ==================== Cards circulo grafico ==================== */
@@ -60,8 +64,9 @@
   align-items: center;
   width: 270px;
   height: 170px;
-  background: var(--bg-black-900);
+  background: var(--bg-fondo-card-statict);
   border-radius: 10px;
+  border: 1px solid white;
 }
 
 .circle-chart {
@@ -103,11 +108,12 @@
 }
 /* ==================== Cards Grafico Barra ==================== */
 .grafico-barra {
-  background-color: var(--bg-black-900);
+  background-color: var(--bg-fondo-card-statict);
   width: 370px;
   height: 170px;
   border-radius: 10px;
   padding: 10px;
+  border: 1px solid white;
 }
 .barra img {
   width: 300px;
@@ -148,9 +154,10 @@
   height: auto;
   gap: 10px;
   padding: 20px;
-  background: var(--bg-black-900);
+  background: var(--bg-fondo-card-statict);
   border-radius: 10px;
-  color: var(--text-black-900);
+  color: var(--txt-statict);
+  
 }
 
 .orden-content {
@@ -160,6 +167,7 @@
   height: 35px;
   list-style: none;
   font-size: 15px;
+ 
 }
 .orden-content span {
   display: block;

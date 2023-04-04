@@ -77,6 +77,7 @@ const Products = ({handleDarkModeToggle}) => {
     
     function buscarPorNombre() {
   const nombreBuscado = nombreABuscar.toLowerCase();
+  
   const resultadoDeBusqueda = productos.filter(
     product => product.name.toLowerCase().includes(nombreBuscado)
   );
@@ -122,8 +123,8 @@ const Products = ({handleDarkModeToggle}) => {
           
           </li>
           <li className='sidebar-list-item'><a onClick={Statistics} href="#"><i className='bx bx-line-chart' ></i>Statistics</a></li>
-          <li className='sidebar-list-item'><a onClick={product} href=""><i className='bx bx-dice-5'></i>Products</a></li>
-          <li className='sidebar-list-item'><a onClick={abrirModal} href=""><i className='bx bx-slider'></i>Settings</a>
+          <li className='sidebar-list-item'><a onClick={product} href="#"><i className='bx bx-dice-5'></i>Products</a></li>
+          <li className='sidebar-list-item'><a onClick={abrirModal} href="#"><i className='bx bx-slider'></i>Settings</a>
           
           {/* modal configuracion */}
           {Modal && (

@@ -47,7 +47,7 @@ const handleDarkModeToggle = () => {
       <Routes>
         <Route path="/" element={<Sidebar  handleDarkModeToggle={handleDarkModeToggle} />} />
         <Route path="/products" element={<Products handleDarkModeToggle={handleDarkModeToggle}  product={product} />} /> 
-        <Route path="/Statistics" element={<Statistics />} />     
+        <Route path="/Statistics" element={<Statistics handleDarkModeToggle={handleDarkModeToggle}  />} />     
       </Routes>
     </HashRouter>
     <div>
