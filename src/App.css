@@ -12,13 +12,16 @@
   --bg-fondo-App: #dcd7d7;
   --bg-fondo-card: white;
   --bg-fondo-card-statict: white;
+  --bg-verde-span:#92fe96;
+  --bg-rojo-span: rgb(244, 105, 105);
 
   --txt-texto-sidebar: gray;
   --txt-texto-App: gray;
   --txt-texto-header: gray;
   --txt-modal: white;
   --txt-statict: black;
-
+  --txt-conf:rgb(107, 107, 107);
+  
   --bg-black-50: #e8dfec;
   --text-black-900: #302e4d;
   --text-black-700: #504e70;
@@ -30,12 +33,15 @@
   --bg-fondo-card: rgb(221, 215, 215);
   --bg-fondo-App: rgba(0, 0, 0, 0.836);
   --bg-fondo-card-statict: rgb(8, 16, 59);
-
+  --bg-verde-span:#17db1e;
+  --bg-rojo-span: rgb(245, 20, 20);
+  
   --txt-texto-sidebar: white;
   --txt-texto-App: white;
   --txt-texto-header: white;
   --txt-modal: rgba(19, 18, 18, 0.479);
   --txt-statict: white;
+  --txt-conf:rgb(255, 255, 255);
 
   --bg-black-50: #e8dfec;
   --text-black-900: #302e4d;
@@ -88,6 +94,29 @@ i {
   font-size: 16px;
   margin-right: 10px;
 }
+/* configuration */
+.modo-oscuro{
+ display: flex;
+ align-items: center;
+ gap: .5rem;
+ width: 100px;
+ height: 30px;
+}
+.modo-oscuro label{
+  margin-top: .4rem;
+  font-weight: 700;
+  color: var(--txt-conf);
+}
+.contenedor-dark{
+  border: 1px solid #0eb2cf;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.icon-bx{
+  width: 50px;
+}
+
 
 /* *********   Header   ********* */
 .container-ordenList h3 {
@@ -119,7 +148,9 @@ i {
   gap: 20px;
   padding: 2rem 0;
 }
-
+.contenedor-home{
+  height: 500px;
+}
 .img-perfil {
   width: 40px;
   height: 40px;
@@ -153,7 +184,7 @@ i {
   text-align: center;
   border-radius: 5px;
   border: 1px solid #f5efef;
-  color: white;
+  color: black;
 }
 h3 {
   text-align: center;

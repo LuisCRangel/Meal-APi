@@ -1,14 +1,22 @@
-import React, { useState} from "react";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-const Statistics = ({ product,handleDarkModeToggle }) => {
+const Statistics = ({ handleDarkModeToggle }) => {
   const [showModal, setShowModal] = useState(false);
-  const[change,setChange] = useState(false)
-  const[contador,setcontador] = useState(6435)
+  const [change, setChange] = useState(false)
+  const [contador, setcontador] = useState(6435)
+  const navigate = useNavigate()
 
-const changeModal = (e)=>{
-e.preventDefault()
-setChange(true)
-}
+  const navegacion = (e) => {
+    e.preventDefault();
+    navigate('/products')
+
+  }
+
+  const changeModal = (e) => {
+    e.preventDefault()
+    setChange(true)
+  }
   const abrir = (e) => {
     e.preventDefault();
     setShowModal(true);
@@ -77,7 +85,7 @@ setChange(true)
             </a>
           </li>
           <li className="sidebar-list-item">
-            <a onClick={product} href="">
+            <a onClick={navegacion} href="">
               <i className="bx bx-dice-5"></i>Products
             </a>
           </li>
@@ -85,17 +93,17 @@ setChange(true)
             <a onClick={changeModal} href="">
               <i className="bx bx-slider"></i>Settings
             </a>
-  {/* modal configuracion */}
-  {change && (
+            {/* modal configuracion */}
+            {change && (
 
-<div className="modal">
-  <div className="modal-content">
+              <div className="modal">
+                <div className="modal-content">
 
-    <i onClick={handleDarkModeToggle} class='bx bxs-moon'></i>
-    <i onClick={() => setChange(false)} className='bx bx-x'></i>
+                  <i onClick={handleDarkModeToggle} class='bx bxs-moon'></i>
+                  <i onClick={() => setChange(false)} className='bx bx-x'></i>
 
-  </div>
-</div>)}
+                </div>
+              </div>)}
 
 
           </li>
@@ -131,14 +139,14 @@ setChange(true)
                 4.3 <i className="bx bxs-star"></i>
               </span>
             </div>
-            <div  className="statistics-cards">
+            <div className="statistics-cards">
               <p>
-                <i  className="bx bx-bookmark bx3"></i>Likes
+                <i className="bx bx-bookmark bx3"></i>Likes
               </p>
-              <span>{contador}<i className='bx bx-like bx-tada' onClick={()=>setcontador(contador +1)} ></i></span>
+              <span>{contador}<i className='bx bx-like bx-tada' onClick={() => setcontador(contador + 1)} ></i></span>
             </div>
           </div>
-        {/* fin Cards estadisticas */}
+          {/* fin Cards estadisticas */}
           <div className="stats-2">
             {/* grafico circular */}
             <div class="circle-container">
@@ -148,37 +156,38 @@ setChange(true)
                   cx="50"
                   cy="50"
                   r="45"
-                  ></circle>
+                ></circle>
                 <circle
                   class="circle-chart-circle"
                   cx="50"
                   cy="50"
                   r="45"
-                  ></circle>
+                ></circle>
                 <text x="50" y="50" class="circle-chart-text">
                   70%
                 </text>
               </svg>
             </div>
-                  {/* grafico barras */}
-          <div className="grafico-barra">
-            <div className="barra">
-               <img src="https://cdn.kastatic.org/ka-perseus-graphie/e2ff3457af2f719e193a668883096ba4c3c5e1d4.svg" alt="" />
+            {/* grafico barras */}
+            <div className="grafico-barra">
+              <div className="barra">
+                <img src="https://cdn.kastatic.org/ka-perseus-graphie/e2ff3457af2f719e193a668883096ba4c3c5e1d4.svg" alt="" />
+              </div>
             </div>
-          </div>
           </div><br /><br />
-                  {/* Contenedor de ordenes */}
+          {/* Contenedor de ordenes */}
           <div className="container-last-order">
-          <ul className="last-order">
-            <li className="orden-content"><span>Entregado</span> Combo Chef burguer whith double eat, cheddar, mozarella,whithout onion, chips extra large and coke </li>
-            <li className="orden-content"><span>Entregado</span> Combo Chef burguer whith double eat, cheddar, mozarella,whithout onion, chips extra large and coke </li>            
-            <li className="orden-content cancel"><span>Cancelado</span>Combo Chef burguer whith double eat, cheddar, mozarella,whithout onion, chips extra large and coke </li>
-            <li className="orden-content"><span>Entregado</span> Combo Chef burguer whith double eat, cheddar, mozarella,whithout onion, chips extra large and coke </li>          
-            <li className="orden-content"><span>Entregado</span> Combo Chef burguer whith double eat, cheddar, mozarella,whithout onion, chips extra large and coke </li>
-            <li className="orden-content cancel"><span>Cancelado</span> Combo Chef burguer whith double eat, cheddar, mozarella,whithout onion, chips extra large and coke </li>           
-          </ul>
+            <ul className="last-order">
+              <li className="orden-content"><span>Entregado</span> Combo Chef burguer whith double eat, cheddar, mozarella,whithout onion, chips extra large and coke </li>
+              <li className="orden-content"><span>Entregado</span> Combo Chef burguer whith double eat, cheddar, mozarella,whithout onion, chips extra large and coke </li>
+              <li className="orden-content cancel"><span>Cancelado</span>Combo Chef burguer whith double eat, cheddar, mozarella,whithout onion, chips extra large and coke </li>
+              <li className="orden-content"><span>Entregado</span> Combo Chef burguer whith double eat, cheddar, mozarella,whithout onion, chips extra large and coke </li>
+              <li className="orden-content"><span>Entregado</span> Combo Chef burguer whith double eat, cheddar, mozarella,whithout onion, chips extra large and coke </li>
+              <li className="orden-content cancel"><span>Cancelado</span> Combo Chef burguer whith double eat, cheddar, mozarella,whithout onion, chips extra large and coke </li>
+            </ul>
           </div>
         </div>
+        <br /> <br />
       </div>
 
       {/* Finaliza Cards estadisticas */}

@@ -27,7 +27,7 @@ const Sidebar = ({ handleDarkModeToggle }) => {
     setModal(true)
   }
 
-  
+
 
 
 
@@ -66,10 +66,17 @@ const Sidebar = ({ handleDarkModeToggle }) => {
             {Modal && (
 
               <div className="modal">
-                <div className="modal-content">
+                <div className="modal-content contenedor-dark" >
 
-                  <i onClick={handleDarkModeToggle} class='bx bxs-moon'></i>
-                  <i onClick={() => setModal(false)} className='bx bx-x'></i>
+                  <div className="modo-oscuro ">
+                    <input 
+                    onClick={handleDarkModeToggle}   
+                    type="checkbox" id='dark'  /> 
+                    <label className='notranslate' htmlFor="dark">dark</label>
+                  
+                  </div>
+                  
+                  <i  onClick={() => setModal(false)} className='bx bx-x icon-bx'></i>
 
                 </div>
               </div>)}
@@ -90,7 +97,7 @@ const Sidebar = ({ handleDarkModeToggle }) => {
 
         {/* cards */}
 
-        <div className="container-cards">
+        <div className="container-cards contenedor-home">
 
         </div>
 
