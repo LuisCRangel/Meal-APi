@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const Statistics = ({ handleDarkModeToggle }) => {
+const Statistics = ({ handleDarkModeToggle,darkWhite,icon }) => {
   const [showModal, setShowModal] = useState(false);
   const [change, setChange] = useState(false)
   const [contador, setcontador] = useState(6435)
@@ -32,12 +32,12 @@ const Statistics = ({ handleDarkModeToggle }) => {
         />
         <ul className="sidebar-list">
           <li className="sidebar-list-item">
-            <a href="#">
+            <a className='notranslate' href="#">
               <i className="bx bx-home-alt"></i>Home
             </a>
           </li>
           <li className="sidebar-list-item">
-            <a onClick={abrir} href="">
+            <a className='notranslate' onClick={abrir} href="">
               <i className="bx bx-envelope"></i>Messages
             </a>
 
@@ -80,21 +80,19 @@ const Statistics = ({ handleDarkModeToggle }) => {
             )}
           </li>
           <li className="sidebar-list-item">
-            <a onClick={Statistics} href="#">
+            <a className='notranslate' onClick={Statistics} href="#">
               <i className="bx bx-line-chart"></i>Statistics
             </a>
           </li>
           <li className="sidebar-list-item">
-            <a onClick={navegacion} href="">
+            <a className='notranslate' onClick={navegacion} href="">
               <i className="bx bx-dice-5"></i>Products
             </a>
           </li>
-          <li className="sidebar-list-item">
-            <a onClick={changeModal} href="">
-              <i className="bx bx-slider"></i>Settings
-            </a>
+
+          <li className='sidebar-list-item'><a className='notranslate'  onClick={handleDarkModeToggle}  href="" style={{display:"flex",flexDirection:"row"}}> <div > { icon ? <i className='bx bx-moon'></i> :  <i className='bx bx-sun'></i> } </div> {darkWhite}</a>
             {/* modal configuracion */}
-            {change && (
+            {/* {change && (
 
               <div className="modal">
                 <div className="modal-content">
@@ -103,12 +101,12 @@ const Statistics = ({ handleDarkModeToggle }) => {
                   <i onClick={() => setChange(false)} className='bx bx-x'></i>
 
                 </div>
-              </div>)}
+              </div>)} */}
 
 
           </li>
           <li className="sidebar-list-item">
-            <a href="">
+            <a className='notranslate' href="">
               <i className="bx bx-log-in"></i>Logout
             </a>
           </li>

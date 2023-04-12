@@ -34,10 +34,22 @@ useEffect(()=>{
 // *************** modo nocturno*************
 
 const [darkMode, setDarkMode] = useState(false);
+const[darkWhite,setDarkWhite] = useState("Dark")
+const[icon,setIcon]= useState(true)
 
+// const icons =()=>{
+//   setIcon(!icon)
+// }
 
-const handleDarkModeToggle = () => {
+const handleDarkModeToggle = (e) => {
+e.preventDefault();
   setDarkMode(!darkMode);
+  setIcon(!icon)
+
+  if (darkWhite === "Dark") {
+    setDarkWhite("White")
+    
+  }else{setDarkWhite("Dark")}
  
 } 
 
@@ -47,9 +59,9 @@ const handleDarkModeToggle = () => {
     <div className={`App ${darkMode ? "dark-mode" : ""}`}> 
         <HashRouter>
       <Routes>
-        <Route path="/" element={<Sidebar  handleDarkModeToggle={handleDarkModeToggle} />} />
-        <Route path="/products" element={<Products handleDarkModeToggle={handleDarkModeToggle}  product={product} />} /> 
-        <Route path="/Statistics" element={<Statistics handleDarkModeToggle={handleDarkModeToggle}  />} />     
+        <Route path="/" element={<Sidebar  icon={icon} darkWhite={darkWhite}  handleDarkModeToggle={handleDarkModeToggle} />} />
+        <Route path="/products"  element={<Products icon={icon} darkWhite={darkWhite}  handleDarkModeToggle={handleDarkModeToggle}  product={product} />} /> 
+        <Route path="/Statistics" element={<Statistics icon={icon} darkWhite={darkWhite}  handleDarkModeToggle={handleDarkModeToggle}  />} />     
       </Routes>
     </HashRouter>
     <div>
